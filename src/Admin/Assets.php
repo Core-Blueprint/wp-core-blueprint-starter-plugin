@@ -11,7 +11,7 @@ declare(strict_types=1);
 
 namespace CB\Starter\Admin;
 
-use CB\Core\Admin\PageRegistry;
+use CoreBlueprint\Core\Admin\PageRegistry;
 
 defined( 'ABSPATH' ) || exit;
 

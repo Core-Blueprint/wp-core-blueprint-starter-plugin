@@ -12,8 +12,8 @@ declare(strict_types=1);
 
 namespace CB\Starter\Governance;
 
-use CB\Core\Governance\Audit;
-use CB\Core\Governance\EventRegistry;
+use CoreBlueprint\Core\Governance\Audit;
+use CoreBlueprint\Core\Governance\EventRegistry;
 
 defined( 'ABSPATH' ) || exit;
 

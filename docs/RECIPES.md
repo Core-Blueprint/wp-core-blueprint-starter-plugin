@@ -51,7 +51,7 @@ Only use the module activation contract when the feature genuinely needs a canon
 The state class implements:
 
 ```php
-use CB\Core\Modules\ModuleStateInterface;
+use CoreBlueprint\Core\Modules\ModuleStateInterface;
 
 final class State implements ModuleStateInterface {
     public static function is_enabled(): bool {
@@ -80,7 +80,7 @@ Activation state and health are separate. Do not overload the status provider as
 
 ## Add extension-owned database tables
 
-Use `CB\\Core\\Database\\SchemaRegistry` only when WordPress-native options/meta/content are not an appropriate storage model.
+Use `CoreBlueprint\\Core\\Database\\SchemaRegistry` only when WordPress-native options/meta/content are not an appropriate storage model.
 
 ```php
 SchemaRegistry::register( [

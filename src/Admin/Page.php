@@ -8,9 +8,9 @@ declare(strict_types=1);
 
 namespace CB\Starter\Admin;
 
-use CB\Core\Admin\Page as PageContract;
-use CB\Core\Admin\PageRegistry;
-use CB\Core\UI\Notice;
+use CoreBlueprint\Core\Admin\Page as PageContract;
+use CoreBlueprint\Core\Admin\PageRegistry;
+use CoreBlueprint\Core\UI\Notice;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -18,7 +18,7 @@ final class Page implements PageContract {
 	public const SLUG = 'core-blueprint-starter-plugin';
 
 	public static function init(): void {
-		add_action( 'cb_core_register_pages', [ __CLASS__, 'register' ] );
+		add_action( 'core_blueprint_register_pages', [ __CLASS__, 'register' ] );
 	}
 
 	public static function register(): void {

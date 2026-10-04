@@ -12,16 +12,16 @@ declare(strict_types=1);
 
 namespace CB\Starter\Examples;
 
-use CB\Core\Automation\ActionRegistry;
-use CB\Core\Automation\StateRegistry;
-use CB\Core\Automation\TriggerRegistry;
+use CoreBlueprint\Core\Automation\ActionRegistry;
+use CoreBlueprint\Core\Automation\StateRegistry;
+use CoreBlueprint\Core\Automation\TriggerRegistry;
 use CB\Starter\Integration\Suite;
 
 defined( 'ABSPATH' ) || exit;
 
 final class AutomationProvider {
 	public static function init(): void {
-		add_action( 'cb_core_register_automation_capabilities', [ self::class, 'register' ] );
+		add_action( 'core_blueprint_register_automation_capabilities', [ self::class, 'register' ] );
 	}
 
 	public static function register(): void {

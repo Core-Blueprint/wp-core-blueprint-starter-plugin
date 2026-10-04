@@ -53,7 +53,7 @@ Remove examples that a real extension does not need.
 
 ## Extension identity
 
-`CB\\Core\\ExtensionRegistry` is the canonical platform identity boundary. The starter uses one ID:
+`CoreBlueprint\\Core\\ExtensionRegistry` is the canonical platform identity boundary. The starter uses one ID:
 
 `core-blueprint-starter-plugin`
 
@@ -63,9 +63,9 @@ Compatibility is expressed with Core API `major.minor`. Exact Base release check
 
 ## Core Admin page
 
-`CB\\Starter\\Admin\\Page` implements `CB\\Core\\Admin\\Page` directly. It does not inherit Base's internal `PageBase` convenience class.
+`CB\\Starter\\Admin\\Page` implements `CoreBlueprint\\Core\\Admin\\Page` directly. It does not inherit Base's internal `PageBase` convenience class.
 
-Registration happens on `cb_core_register_pages` and declares only the shared components used by the markup:
+Registration happens on `core_blueprint_register_pages` and declares only the shared components used by the markup:
 
 - `panels`
 - `notices`
@@ -84,18 +84,18 @@ A structural markup or interaction contract change is different and may legitima
 
 ## Status
 
-The health provider is registered through `cb_core_module_status_definitions`. Base invokes providers lazily when status is requested and validates the `ok|warn|err|off` shape.
+The health provider is registered through `core_blueprint_module_status_definitions`. Base invokes providers lazily when status is requested and validates the `ok|warn|err|off` shape.
 
 The example provider is intentionally cheap and read-only. Real status providers must not hide mutations, repair work or expensive request-hot operations.
 
 ## Governance
 
-Event metadata is registered through `CB\\Core\\Governance\\EventRegistry` on `init` or later. Event writes go only through `CB\\Core\\Governance\\Audit::record()`.
+Event metadata is registered through `CoreBlueprint\\Core\\Governance\\EventRegistry` on `init` or later. Event writes go only through `CoreBlueprint\\Core\\Governance\\Audit::record()`.
 
 Do not use:
 
 - `cb_core_event_labels`;
-- `CB\\Core\\Log\\AuditLog`;
+- `CoreBlueprint\\Core\\Log\\AuditLog`;
 - Base repositories or storage classes.
 
 The starter does not emit its example event automatically.

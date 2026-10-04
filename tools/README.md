@@ -16,7 +16,7 @@ Current checks include:
 
 - no private Base `cb-core-css-*` handles;
 - no legacy `cb_core_event_labels` mutation;
-- no direct `CB\\Core\\Log\\AuditLog` writes;
+- no direct `CoreBlueprint\\Core\\Log\\AuditLog` writes;
 - no private `AdminAssetCatalog` access;
 - no direct WordPress menu registration for Core Admin pages;
 - no `PageBase` dependency;

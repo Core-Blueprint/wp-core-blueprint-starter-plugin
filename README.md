@@ -18,11 +18,11 @@ Runtime compatibility is based on `CB_CORE_API_VERSION`, not on the exact Base p
 ## What this starter demonstrates
 
 - hard Base dependency with fail-safe inert runtime when Base is unavailable;
-- canonical `CB\\Core\\ExtensionRegistry` registration;
-- a `CB\\Core\\Admin\\Page` registered through `PageRegistry`;
+- canonical `CoreBlueprint\\Core\\ExtensionRegistry` registration;
+- a `CoreBlueprint\\Core\\Admin\\Page` registered through `PageRegistry`;
 - semantic Core Admin Design Foundation requirements;
 - exact page-scoped extension CSS through `PageRegistry::hook_suffix()`;
-- lazy module health through `cb_core_module_status_definitions`;
+- lazy module health through `core_blueprint_module_status_definitions`;
 - Governance metadata through `EventRegistry` and writes through `Audit::record()`;
 - WordPress-safe translation loading on `init`;
 - a deliberately non-loaded Automation Foundation provider reference with `semantic_type` examples;

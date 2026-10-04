@@ -20,7 +20,7 @@ The reference file consequently lives under `examples/`, outside the Starter aut
 
 `examples/AutomationProvider.php` shows:
 
-- registration through `cb_core_register_automation_capabilities`;
+- registration through `core_blueprint_register_automation_capabilities`;
 - provider identity matching `Integration\Suite::ID`;
 - one Trigger, one read-only State capability and one Action contract;
 - stable dotted capability IDs and schema version `1`;
@@ -100,9 +100,9 @@ When adapting this reference, verify it against current Core Blueprint Base:
 
 - `docs/PUBLIC-API.md`
 - `docs/AUTOMATION-FOUNDATION.md`
-- `CB\Core\Automation\TriggerRegistry`
-- `CB\Core\Automation\StateRegistry`
-- `CB\Core\Automation\ActionRegistry`
-- `CB\Core\Automation\Schema`
+- `CoreBlueprint\Core\Automation\TriggerRegistry`
+- `CoreBlueprint\Core\Automation\StateRegistry`
+- `CoreBlueprint\Core\Automation\ActionRegistry`
+- `CoreBlueprint\Core\Automation\Schema`
 
 Base public contracts remain authoritative.

@@ -83,9 +83,9 @@ function cb_starter_base_ready(): bool {
 		return false;
 	}
 
-	return class_exists( '\\CB\\Core\\ExtensionRegistry' )
-		&& class_exists( '\\CB\\Core\\Admin\\PageRegistry' )
-		&& interface_exists( '\\CB\\Core\\Admin\\Page' );
+	return class_exists( '\\CoreBlueprint\\Core\\ExtensionRegistry' )
+		&& class_exists( '\\CoreBlueprint\\Core\\Admin\\PageRegistry' )
+		&& interface_exists( '\\CoreBlueprint\\Core\\Admin\\Page' );
 }
 
 /** Human-readable dependency state for the runtime admin notice. */

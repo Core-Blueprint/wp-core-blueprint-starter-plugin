@@ -29,8 +29,8 @@ Use this checklist before turning the starter into a real plugin.
 
 If the extension needs a page beneath Core Blueprint:
 
-- [ ] Page implements `CB\\Core\\Admin\\Page` directly.
-- [ ] Page registers on `cb_core_register_pages`.
+- [ ] Page implements `CoreBlueprint\\Core\\Admin\\Page` directly.
+- [ ] Page registers on `core_blueprint_register_pages`.
 - [ ] Position is `null` or `>= 100`.
 - [ ] Capability is explicit and appropriate for the feature.
 - [ ] Only actually used semantic `foundations`/`components` are declared.
@@ -61,7 +61,7 @@ If the extension does not need a Core Admin page, remove the example `Admin` cla
 
 If status is useful:
 
-- [ ] Status definition uses `cb_core_module_status_definitions`.
+- [ ] Status definition uses `core_blueprint_module_status_definitions`.
 - [ ] Provider is lazy and read-only.
 - [ ] Provider returns only `ok|warn|err|off`.
 - [ ] Detail is short and factual.
